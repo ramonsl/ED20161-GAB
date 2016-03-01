@@ -16,7 +16,10 @@ public class Exemplos {
         boolean b=true;
         char Cc;
         String umaString;
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/master
 
         Scanner tc = new Scanner(System.in);
 
