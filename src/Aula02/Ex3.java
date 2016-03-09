@@ -23,7 +23,9 @@ public class Ex3 {
               do{
                   lido=tc.nextInt();
                   vet[i]=lido;
-              }while ((lido>3)&&(lido>0) );
+
+
+              }while ((lido>3)||(lido<0) );
           }else{
               System.out.println("Digite o valor maior que "+ vet[i-1]);
               do{
