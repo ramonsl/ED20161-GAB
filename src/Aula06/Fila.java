@@ -24,6 +24,14 @@ public class Fila {
         }
     }
 
+    public boolean isEmpty(){
+        if (this.fim==-1){
+            System.out.println("Fila vazia");
+            return true;
+        }else{
+            return false;
+        }
+    }
     public boolean add(int a){
 
         if (isFull()){
@@ -43,6 +51,17 @@ public class Fila {
     }
 
     public boolean remover(){
-        return true;
+        if (!isEmpty()){
+            for (int i=1; i< this.fim;i++){
+                this.vet[i]=this.vet[i-1];
+            }
+            this.fim--;
+            return true;
+        }
+        return false;
     }
+
+
+
+
 }

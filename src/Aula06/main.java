@@ -8,7 +8,7 @@ public class main {
     public static void main(String[] args) {
         Pilha p = new Pilha();
 
-      //  p.inicializar();
+      /* p.inicializar();
 
         ///add o elemento 1
         p.push(1);
@@ -24,6 +24,17 @@ public class main {
         p.top();
         p.pull(123);
         p.top();
+    */
+        Fila f = new Fila();
+
+        f.add(3);
+        f.inicializar();
+        f.add(3);
+        f.add(4);
+        f.add(5);
+        f.remover();
+
+
 
 
 
