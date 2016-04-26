@@ -1,8 +1,5 @@
 package Aula06;
 
-/**
- * Created by ramon on 29/03/16.
- */
 public class Pilha {
     int topo;
     int base;
@@ -32,6 +29,9 @@ public class Pilha {
             return false;
         }
     }
+
+
+
 
     public boolean push(int a){
 
