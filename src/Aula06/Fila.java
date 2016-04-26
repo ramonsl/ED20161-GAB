@@ -52,14 +52,20 @@ public class Fila {
 
     public boolean remover(){
         if (!isEmpty()){
-            for (int i=1; i< this.fim;i++){
-                this.vet[i]=this.vet[i-1];
+            for (int i=0; i< this.fim;i++){
+                this.vet[i]=this.vet[i+1];
             }
             this.fim--;
             return true;
         }
         return false;
     }
+    public void mostraFila(){
+        for (int i=0; i<= this.fim;i++){
+            System.out.printf(String.valueOf(this.vet[i]));
+        }
+    }
+
 
 
 

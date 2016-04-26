@@ -34,7 +34,7 @@ public class main {
         f.add(5);
         f.remover();
 
-
+        f.mostraFila();
 
 
 
