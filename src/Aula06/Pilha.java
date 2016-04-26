@@ -3,7 +3,7 @@ package Aula06;
 public class Pilha {
     int topo;
     int base;
-    boolean isInit;
+    boolean isInit=false;
     int[] vet= new int[10];
 
    public boolean inicializar() {
