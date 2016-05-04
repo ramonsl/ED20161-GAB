@@ -6,8 +6,8 @@ package Aula11;
 public class Ordenacao {
 
     public static void main(String[] args) {
-        int vetorA[]={10,9,8,7,6};
-        int vetorB[]={10,9,8,7,6};
+        int vetorA[]={4,2,1,10,3};
+        int vetorB[]={4,2,1,10,3};
         metodo1(vetorA,5);
         metodo2(vetorB,5);
     }
@@ -35,8 +35,9 @@ public class Ordenacao {
             {
                 System.out.printf(String.valueOf(vetor[r])+" -" );
             }
-            System.out.println(trocas);
-            System.out.println(comp);
+            System.out.println("  ");
+            System.out.println("Trocas " +trocas);
+            System.out.println("Comp " +comp);
         }
     }
 
@@ -58,6 +59,7 @@ public class Ordenacao {
                 if (vetor[j] < menor){
                     menor = vetor[j];
                     indiceMenor = j;
+                    trocas++;
 
                 }
             }
@@ -65,7 +67,7 @@ public class Ordenacao {
 
             vetor[indiceMenor] = vetor[i];
             vetor[i] = menor;
-            trocas++;
+
 
         }
 
@@ -73,8 +75,9 @@ public class Ordenacao {
         {
             System.out.print(String.valueOf(vetor[r])+" -");
         }
-        System.out.println(trocas);
-        System.out.println(comp);
+        System.out.println("  ");
+        System.out.println("Trocas " +trocas);
+        System.out.println("Comp " +comp);
     }
 
 }
