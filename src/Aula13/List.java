@@ -10,7 +10,7 @@ public class List {
     public int qtd;
 
 
-    public boolean add(Elemento e){
+    private boolean add(Elemento e){
         if (this.inicio==null){
             this.inicio = e;
             this.fim=e;
@@ -46,13 +46,54 @@ public class List {
 
     }
     public boolean delInicio(){
+        if(this.inicio==null){
+            System.out.println("Lista Vazia!!!");
+        }else{
+            if(qtd==1){
+                Elemento aux = this.inicio;
+                this.inicio=aux.proximo;
+                this.fim=aux.proximo;
+                this.qtd--;
+            }else{
+                Elemento aux = this.inicio;
+                this.inicio=aux.proximo;
+                this.qtd--;
+            }
+
+        }
+
         return false;
     }
     public boolean delMeio(){
         return false;
     }
     public boolean delFim(){
+        if(this.inicio==null){
+            System.out.println("Lista vazia");
+        }else{
+            if (this.qtd==1){
+                Elemento aux = this.inicio;
+                this.inicio=aux.proximo;
+                this.fim=aux.proximo;
+                this.qtd--;
+                return true;
+            }else{
+                Elemento aux=this.inicio;
+                Elemento pena= this.inicio;
+                while (aux.proximo!=null){
+                    pena=aux;
+                    aux=aux.proximo;
+                }
+                pena.proximo=null;
+                this.fim =pena;
+                qtd--;
+                return true;
+
+            }
+        }
+
         return false;
+
     }
     public boolean update(){
         return false;
