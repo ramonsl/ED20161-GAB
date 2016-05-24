@@ -8,17 +8,14 @@ import java.util.Scanner;
  */
 public class Conteiner {
     String tipo;
-    String codigo;
-    SimpleDateFormat data;
+
     Conteiner next;
 
-    @Override
-    public String toString() {
-        return "|Conteiner{" +
-                "data=" + data +
-                ", codigo='" + codigo + '\'' +
-                ", tipo='" + tipo + '\'' +
-                '|';
+
+    public void mostrar() {
+
+        System.out.println(    "| " + tipo +     "|" );
+
     }
 
     public void ler(){

@@ -30,7 +30,7 @@ public class Pilha {
       //  Scanner tc= new Scanner(System.in);
         list();
         System.out.println("--------------------------");
-        System.out.println("["+ nome + "]"+ "{"+cod+"}");
+        System.out.println("["+ nome + "]"+ "Codigo {"+cod+"}");
 
     }
 
@@ -39,21 +39,39 @@ public class Pilha {
         Conteiner aux= this.base;
         if(base==null){
             System.out.println("------------------------");
-            System.out.println("|                      | ");
-            System.out.println("|                      | ");
-            System.out.println("|                      | ");
-            System.out.println("|                      | ");
             System.out.println("        VAZIA          ");
             System.out.println("------------------------");
         }else{
-            while (aux!=null){
-                System.out.println(  aux.toString());
-                aux=aux.next;
-            }
+            System.out.println("conteirner do topo");
+          this.topo.mostrar();
         }
 
     }
 
+    public boolean pop(){
+        if(this.base==null){
+            System.out.println("        VAZIA          ");
+            return false;
+        }else{
+            Conteiner aux = this.base;
+            Conteiner ant =this.base;
+
+            if(this.qtd==1){
+                this.topo=null;
+                this.base=null;
+                this.qtd=0;
+                return  true;
+            }
+
+            while (aux!= null){
+                ant =aux;
+                aux=aux.next;
+            }
+            ant.next=null;
+            this.topo=aux;
+            return true;
+        }
+    }
 
     public boolean push(Conteiner c){
         if(base == null){
@@ -67,12 +85,10 @@ public class Pilha {
                 System.out.println("Pilha acima do limete");
                 return false;
             }else{
-                Conteiner aux=this.base;
-                while (aux.next!=null){
-                    aux=aux.next;
-                }
+                Conteiner aux = this.topo;
                 aux.next=c;
                 this.topo=c;
+                this.qtd++;
                 return true;
             }
         }
