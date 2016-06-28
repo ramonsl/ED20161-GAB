@@ -9,7 +9,6 @@ public class ListaO {
         Elemento fim;
         int qtd;
 
-
         boolean add(Elemento c){
             if(inicio==null){
                 return addInicio(c);
@@ -22,7 +21,6 @@ public class ListaO {
                         break;
                     }
                     aux =aux.prx;
-
                 }
                 if(cont ==0){
                 return     addInicio(c);
@@ -34,6 +32,17 @@ public class ListaO {
                 }
             }
         }
+
+    boolean list(){
+        Elemento aux= this.fim;
+        while (aux!=null){
+            System.out.println(aux.nome);
+            aux=aux.ant;
+        }
+        return true;
+    }
+
+
 
         boolean addInicio(Elemento c){
             if(this.inicio ==null){
@@ -82,14 +91,7 @@ public class ListaO {
     }
 
 
-    boolean list(){
-        Elemento aux= this.inicio;
-        while (aux!=null){
-        System.out.println(aux.nome);
-            aux=aux.prx;
-        }
-        return true;
-    }
+
 
 
 

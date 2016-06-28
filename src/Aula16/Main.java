@@ -8,7 +8,7 @@ import Aula13.List;
 public class Main {
     public static void main(String[] args) {
         Elemento a = new Elemento();
-        a.nome="a";
+        a.nome="Amendeoin";
         Elemento c = new Elemento();
         c.nome="c";
         Elemento b = new Elemento();
@@ -17,9 +17,7 @@ public class Main {
         d.nome="d";
         Elemento z = new Elemento();
         z.nome="z";
-
         ListaO lista= new ListaO();
-
         lista.add(a);
         lista.add(d);
         lista.add(z);
