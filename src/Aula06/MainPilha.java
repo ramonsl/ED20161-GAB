@@ -19,7 +19,7 @@ public class MainPilha {
         push(3);
         push(4);
         top();
-        pop();   pop();   pop();   pop();   pop();   pop();
+        pop();
         top();
     }
 
